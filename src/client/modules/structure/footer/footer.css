@@ -80,6 +80,10 @@ body {
   background: transparent;
 }
 
+.acknowledge {
+  font-size: 0.8125rem;
+}
+
 @media (pointer: coarse) and (hover: none) {
   body {
     font-size: 1rem;

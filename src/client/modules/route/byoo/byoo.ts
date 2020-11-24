@@ -19,6 +19,11 @@ export default class Byoo extends LightningElement {
 
   get templateArray() {
     // console.log(this.template);
-    return Array.isArray(this.template) ? this.template : [this.template];
+    const tempArray = Array.isArray(this.template) ? this.template : [this.template];
+    let templateArray = tempArray.map(function(x){
+     return {'value': x, 'label': x.substring(x.lastIndexOf('/') + 1)}
+    });
+    console.log(templateArray);
+    return templateArray;
   }
 }
